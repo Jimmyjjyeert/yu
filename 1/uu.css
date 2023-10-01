@@ -1,0 +1,42 @@
+/* 在大屏幕上的样式 */
+body {
+    font-size: 16px;
+    .header {
+        background-color: #333; /* 背景颜色 */
+        color: #fff; /* 文本颜色 */
+        padding: 10px; /* 内边距 */
+        text-align: center; /* 文本居中 */
+    }
+    
+    .header h1 {
+        margin: 0; /* 去除标题的默认边距 */
+    }
+    
+    .header nav ul {
+        list-style: none; /* 去除列表样式 */
+        padding: 0; /* 去除内边距 */
+    }
+    
+    .header nav ul li {
+        display: inline-block; /* 行内块元素 */
+        margin-right: 10px; /* 右侧间距 */
+    }
+    
+    .header a {
+        color: #fff; /* 链接颜色 */
+        text-decoration: none; /* 去除链接下划线 */
+    }
+    
+/* 在小屏幕上的样式 */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* 在小屏幕上使用稍小的字体大小 */
+    }
+
+    .header {
+        display: none; /* 在小屏幕上隐藏头部 */
+    }
+
+    /* 其他小屏幕上的样式调整 */
+}
+}

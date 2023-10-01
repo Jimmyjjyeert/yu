@@ -1,0 +1,40 @@
+/* styles.css */
+
+.skills li {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+}
+
+.skills li::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.skills li:hover::before {
+    opacity: 1;
+}
+
+.skills li[data-hover-image="discord"]::before {
+    background-image: url('h.png'); /* 替换为你的 Discord 图标路径 */
+    width: 40px; /* 图片宽度 */
+    height: 40px; /* 图片高度 */
+    content: '';
+    display: block;
+    background-size: cover;
+}
+.skills li[data-hover-image="hhl"]::before {
+    background-image: url('jj.gif'); /* 替换为你的 Discord 图标路径 */
+    width: 40px; /* 图片宽度 */
+    height: 40px; /* 图片高度 */
+    content: '';
+    display: block;
+    background-size: cover;
+}
+
+

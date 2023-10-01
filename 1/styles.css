@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #3498db, #6a89cc);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover img {
+    transform: scale(1.1);
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.about-me,
+.skills,
+.projects {
+    margin: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #133261af;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #5f0e58;
+    color: white;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+li:hover {
+    background: #b126c4;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    background: #ecf0f1;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 初始時隱藏專案詳細信息 */
+.project-details {
+    display: none; /* 設定初始不可見 */
+    background: rgba(255, 255, 255, 0.9); /* 背景顏色，使用半透明白色 */
+    padding: 20px; /* 內邊距 */
+    position: fixed; /* 固定定位，相對於視窗 */
+    top: 50%; /* 與視窗頂部的距離為50% */
+    left: 50%; /* 與視窗左側的距離為50% */
+    transform: translate(-50%, -50%); /* 以自身寬高的一半為偏移量，使其居中 */
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    z-index: 1000; /* 確保模態窗口位於其他元素之上 */
+}
+
+/* 頁腳的樣式設置 */
+footer {
+    background: linear-gradient(to right, #a84ad3, hsla(162, 94%, 36%, 0.855)); /* 使用漸變背景色 */
+    color: rgba(226, 136, 52, 0.815); /* 文字顏色 */
+    text-align: center; /* 文本居中對齊 */
+    padding: 10px; /* 內邊距 */
+    position: fixed; /* 固定定位，位於視窗底部 */
+    bottom: 0; /* 與視窗底部的距離為0 */
+    width: 100%; /* 寬度占滿整個視窗 */
+}
+footer {
+    background: linear-gradient(to right, #a84ad3, hsla(162, 94%, 36%, 0.855));
+    color: rgba(226, 136, 52, 0.815);
+    text-align: center;
+    padding: 10px;
+    position: relative; /* 使用相對位置 */
+    bottom: 0;
+    width: 100%;
+    z-index: 2000; /* 設定一個較大的 z-index 值 */
+}
+

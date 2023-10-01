@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吉米的個人網站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ff.css">
+    <link rel="stylesheet" href="uu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="profile-image">
+            <img src="er.png" alt="吉米頭像">
+        </div>
+        <div class="profile-info">
+            <h1>嗨，我是芈樂！</h1>
+            <p>我最近不想努力了。</p>
+        </div>
+    </header>
+
+    <section class="about-me">
+        <h2>關於我</h2>
+        <p>無話可說,我只會html,其他都不會。</p>
+    </section>
+
+    <section class="skills">
+        <h2>技能</h2>
+        <ul>
+
+<!-- 切換背景音效按鈕 -->
+<li style="background-color: #896bf5;">
+    <button onclick="toggleBackgroundSound()">開關音效</button>
+</li>
+
+<!-- 下拉式選單選歌 -->
+<li>
+    <label for="songSelection">選擇歌曲：</label>
+    <select id="songSelection" onchange="changeSong()">
+        <option value="song1">1</option>
+        <option value="song2">歌曲2</option>
+        <option value="song3">歌曲3</option>
+        <!-- 在這裡添加更多歌曲選項 -->
+    </select>
+</li>
+
+<audio id="background-sound" loop>
+    <source id="audio-source" src="song1.mp3" type="audio/mp3">  
+    <source id="audio-source" src="song2.mp3" type="audio/mp3">  
+</audio>
+
+<script>
+    function toggleBackgroundSound() {
+        var audio = document.getElementById('background-sound');
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+
+    function changeSong() {
+        var select = document.getElementById('songSelection');
+        var audioSource = document.getElementById('audio-source');
+        var selectedValue = select.value;
+
+        // 將選擇的歌曲值與對應的mp3檔案名稱相結合
+        var newSource = selectedValue + ".mp3";
+
+        // 更新音樂檔案
+        audioSource.src = newSource;
+
+        // 重新載入音樂
+        document.getElementById('background-sound').load();
+        
+        // 如果音樂正在播放，則重新播放
+        if (!document.getElementById('background-sound').paused) {
+            document.getElementById('background-sound').play();
+        }
+    }
+</script>
+
+
+
+
+
+</script>
+            <li style="background-color: #3498db;">睡覺</li>
+            <li style="background-color: #5f49d8;">交女朋友</li>
+            <li style="background-color: #e28d17;" data-hover-image="hhl">
+                <a href="https://www.instagram.com/jimmy._.0122/" target="_blank">偶的ig</a>
+                     </li>
+           
+            <li style="background-color: #e28d17;" data-hover-image="discord">
+           <a href="https://discord.gg/a254MZzg5s" target="_blank">dc群組</a>
+                </li>
+        </ul>
+    </section>
+
+    <section class="projects">
+         <h2>專案</h2>
+        <div class="project-card">
+            <h3>網站設計</h3>
+            <p>打造一個極具創意和功能性的網站，讓用戶愛不釋手。</p>
+        </div>
+        <div class="project-card">
+            <h3>數據分析應用</h3>
+            <p>開發了一個強大的數據分析應用，幫助企業深入了解他們的數據。</p>
+        </div>
+    </section>
+
+        <footer>
+        <p>我是<a href="mailto:s0901119661@gmail.com">有底線的</a></p>
+        <footer>
+
+    
+</body>
+
+</html>
